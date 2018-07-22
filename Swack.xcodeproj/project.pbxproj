@@ -12,6 +12,8 @@
 		0D4E75862104BC9C006CB742 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D4E75842104BC9C006CB742 /* Main.storyboard */; };
 		0D4E75882104BCA0006CB742 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D4E75872104BCA0006CB742 /* Assets.xcassets */; };
 		0D4E758B2104BCA0006CB742 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D4E75892104BCA0006CB742 /* LaunchScreen.storyboard */; };
+		0DEF513C2104C77700FF7608 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEF513A2104C77600FF7608 /* SWRevealViewController.m */; };
+		D9FE4E3D9EC068A2720B24E1 /* Pods_Swack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32793413EA983DC2923EC40F /* Pods_Swack.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,12 @@
 		0D4E75872104BCA0006CB742 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D4E758A2104BCA0006CB742 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D4E758C2104BCA0006CB742 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DEF51392104C77500FF7608 /* Swack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swack-Bridging-Header.h"; sourceTree = "<group>"; };
+		0DEF513A2104C77600FF7608 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		0DEF513B2104C77700FF7608 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		23597A3FFB07058855FE5BB8 /* Pods-Swack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swack.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swack/Pods-Swack.release.xcconfig"; sourceTree = "<group>"; };
+		32793413EA983DC2923EC40F /* Pods_Swack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72A1CFCF205F0478EB418F85 /* Pods-Swack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swack/Pods-Swack.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9FE4E3D9EC068A2720B24E1 /* Pods_Swack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07278CCBF2D328FAA230252D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				72A1CFCF205F0478EB418F85 /* Pods-Swack.debug.xcconfig */,
+				23597A3FFB07058855FE5BB8 /* Pods-Swack.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		0D4E75742104BC9C006CB742 = {
 			isa = PBXGroup;
 			children = (
 				0D4E757F2104BC9C006CB742 /* Swack */,
 				0D4E757E2104BC9C006CB742 /* Products */,
+				07278CCBF2D328FAA230252D /* Pods */,
+				FBEE4DB44E20D8A8A1935E4E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +74,7 @@
 		0D4E757F2104BC9C006CB742 /* Swack */ = {
 			isa = PBXGroup;
 			children = (
+				0DEF51382104C73200FF7608 /* Supporting Files */,
 				0D4E75802104BC9C006CB742 /* AppDelegate.swift */,
 				0D4E75822104BC9C006CB742 /* ViewController.swift */,
 				0D4E75842104BC9C006CB742 /* Main.storyboard */,
@@ -64,6 +85,24 @@
 			path = Swack;
 			sourceTree = "<group>";
 		};
+		0DEF51382104C73200FF7608 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0DEF513B2104C77700FF7608 /* SWRevealViewController.h */,
+				0DEF513A2104C77600FF7608 /* SWRevealViewController.m */,
+				0DEF51392104C77500FF7608 /* Swack-Bridging-Header.h */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FBEE4DB44E20D8A8A1935E4E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32793413EA983DC2923EC40F /* Pods_Swack.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0D4E758F2104BCA0006CB742 /* Build configuration list for PBXNativeTarget "Swack" */;
 			buildPhases = (
+				68313828B2A2BD637C177BB5 /* [CP] Check Pods Manifest.lock */,
 				0D4E75792104BC9C006CB742 /* Sources */,
 				0D4E757A2104BC9C006CB742 /* Frameworks */,
 				0D4E757B2104BC9C006CB742 /* Resources */,
+				8073E517F6CD547F9CF06D41 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -96,6 +137,7 @@
 				TargetAttributes = {
 					0D4E757C2104BC9C006CB742 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -130,6 +172,51 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		68313828B2A2BD637C177BB5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Swack-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8073E517F6CD547F9CF06D41 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Swack/Pods-Swack-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swack/Pods-Swack-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0D4E75792104BC9C006CB742 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -137,6 +224,7 @@
 			files = (
 				0D4E75832104BC9C006CB742 /* ViewController.swift in Sources */,
 				0D4E75812104BC9C006CB742 /* AppDelegate.swift in Sources */,
+				0DEF513C2104C77700FF7608 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,8 +366,10 @@
 		};
 		0D4E75902104BCA0006CB742 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72A1CFCF205F0478EB418F85 /* Pods-Swack.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Swack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -288,6 +378,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.me.iLearn.Swack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Swack/Supporting Files/Swack-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -295,8 +387,10 @@
 		};
 		0D4E75912104BCA0006CB742 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23597A3FFB07058855FE5BB8 /* Pods-Swack.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Swack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -305,6 +399,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.me.iLearn.Swack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Swack/Supporting Files/Swack-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
