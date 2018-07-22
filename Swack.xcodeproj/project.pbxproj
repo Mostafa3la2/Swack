@@ -7,19 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D08EAC321051D0C00A333D5 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D08EAC221051D0C00A333D5 /* GradientView.swift */; };
 		0D4E75812104BC9C006CB742 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E75802104BC9C006CB742 /* AppDelegate.swift */; };
-		0D4E75832104BC9C006CB742 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E75822104BC9C006CB742 /* ViewController.swift */; };
 		0D4E75862104BC9C006CB742 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D4E75842104BC9C006CB742 /* Main.storyboard */; };
 		0D4E75882104BCA0006CB742 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D4E75872104BCA0006CB742 /* Assets.xcassets */; };
 		0D4E758B2104BCA0006CB742 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D4E75892104BCA0006CB742 /* LaunchScreen.storyboard */; };
 		0DEF513C2104C77700FF7608 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEF513A2104C77600FF7608 /* SWRevealViewController.m */; };
+		0DEF51412104CAED00FF7608 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEF51402104CAED00FF7608 /* ChatVC.swift */; };
+		0DEF51432104CAFC00FF7608 /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEF51422104CAFC00FF7608 /* ChannelVC.swift */; };
 		D9FE4E3D9EC068A2720B24E1 /* Pods_Swack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32793413EA983DC2923EC40F /* Pods_Swack.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D08EAC221051D0C00A333D5 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		0D4E757D2104BC9C006CB742 /* Swack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D4E75802104BC9C006CB742 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0D4E75822104BC9C006CB742 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0D4E75852104BC9C006CB742 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0D4E75872104BCA0006CB742 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D4E758A2104BCA0006CB742 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -27,6 +29,8 @@
 		0DEF51392104C77500FF7608 /* Swack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swack-Bridging-Header.h"; sourceTree = "<group>"; };
 		0DEF513A2104C77600FF7608 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		0DEF513B2104C77700FF7608 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		0DEF51402104CAED00FF7608 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		0DEF51422104CAFC00FF7608 /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
 		23597A3FFB07058855FE5BB8 /* Pods-Swack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swack.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swack/Pods-Swack.release.xcconfig"; sourceTree = "<group>"; };
 		32793413EA983DC2923EC40F /* Pods_Swack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72A1CFCF205F0478EB418F85 /* Pods-Swack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swack/Pods-Swack.debug.xcconfig"; sourceTree = "<group>"; };
@@ -74,9 +78,11 @@
 		0D4E757F2104BC9C006CB742 /* Swack */ = {
 			isa = PBXGroup;
 			children = (
+				0DEF513F2104CAC400FF7608 /* Controller */,
+				0DEF513E2104CAB500FF7608 /* View */,
+				0DEF513D2104CAAC00FF7608 /* Model */,
 				0DEF51382104C73200FF7608 /* Supporting Files */,
 				0D4E75802104BC9C006CB742 /* AppDelegate.swift */,
-				0D4E75822104BC9C006CB742 /* ViewController.swift */,
 				0D4E75842104BC9C006CB742 /* Main.storyboard */,
 				0D4E75872104BCA0006CB742 /* Assets.xcassets */,
 				0D4E75892104BCA0006CB742 /* LaunchScreen.storyboard */,
@@ -93,6 +99,30 @@
 				0DEF51392104C77500FF7608 /* Swack-Bridging-Header.h */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0DEF513D2104CAAC00FF7608 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0DEF513E2104CAB500FF7608 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0D08EAC221051D0C00A333D5 /* GradientView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0DEF513F2104CAC400FF7608 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0DEF51402104CAED00FF7608 /* ChatVC.swift */,
+				0DEF51422104CAFC00FF7608 /* ChannelVC.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		FBEE4DB44E20D8A8A1935E4E /* Frameworks */ = {
@@ -222,7 +252,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D4E75832104BC9C006CB742 /* ViewController.swift in Sources */,
+				0DEF51432104CAFC00FF7608 /* ChannelVC.swift in Sources */,
+				0DEF51412104CAED00FF7608 /* ChatVC.swift in Sources */,
+				0D08EAC321051D0C00A333D5 /* GradientView.swift in Sources */,
 				0D4E75812104BC9C006CB742 /* AppDelegate.swift in Sources */,
 				0DEF513C2104C77700FF7608 /* SWRevealViewController.m in Sources */,
 			);
