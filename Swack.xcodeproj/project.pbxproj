@@ -10,10 +10,13 @@
 		0D08EAC321051D0C00A333D5 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D08EAC221051D0C00A333D5 /* GradientView.swift */; };
 		0D08EAC6210532F100A333D5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D08EAC5210532F100A333D5 /* Constants.swift */; };
 		0D08EAC8210538E900A333D5 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D08EAC7210538E900A333D5 /* LoginVC.swift */; };
+		0D08EACB210579B800A333D5 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D08EACA210579B800A333D5 /* AuthService.swift */; };
+		0D08EACD21058EE300A333D5 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D08EACC21058EE300A333D5 /* CreateAccountVC.swift */; };
 		0D4E75812104BC9C006CB742 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E75802104BC9C006CB742 /* AppDelegate.swift */; };
 		0D4E75862104BC9C006CB742 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D4E75842104BC9C006CB742 /* Main.storyboard */; };
 		0D4E75882104BCA0006CB742 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D4E75872104BCA0006CB742 /* Assets.xcassets */; };
 		0D4E758B2104BCA0006CB742 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D4E75892104BCA0006CB742 /* LaunchScreen.storyboard */; };
+		0D6EEC2A2106556800892B21 /* RoundedBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6EEC292106556800892B21 /* RoundedBtn.swift */; };
 		0DEF513C2104C77700FF7608 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEF513A2104C77600FF7608 /* SWRevealViewController.m */; };
 		0DEF51412104CAED00FF7608 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEF51402104CAED00FF7608 /* ChatVC.swift */; };
 		0DEF51432104CAFC00FF7608 /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEF51422104CAFC00FF7608 /* ChannelVC.swift */; };
@@ -24,12 +27,15 @@
 		0D08EAC221051D0C00A333D5 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		0D08EAC5210532F100A333D5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0D08EAC7210538E900A333D5 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		0D08EACA210579B800A333D5 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		0D08EACC21058EE300A333D5 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		0D4E757D2104BC9C006CB742 /* Swack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D4E75802104BC9C006CB742 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D4E75852104BC9C006CB742 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0D4E75872104BCA0006CB742 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D4E758A2104BCA0006CB742 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D4E758C2104BCA0006CB742 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D6EEC292106556800892B21 /* RoundedBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBtn.swift; sourceTree = "<group>"; };
 		0DEF51392104C77500FF7608 /* Swack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swack-Bridging-Header.h"; sourceTree = "<group>"; };
 		0DEF513A2104C77600FF7608 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		0DEF513B2104C77700FF7608 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -69,6 +75,14 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		0D08EAC92105799E00A333D5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0D08EACA210579B800A333D5 /* AuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		0D4E75742104BC9C006CB742 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +104,7 @@
 		0D4E757F2104BC9C006CB742 /* Swack */ = {
 			isa = PBXGroup;
 			children = (
+				0D08EAC92105799E00A333D5 /* Services */,
 				0D08EAC4210532CB00A333D5 /* Utilities */,
 				0DEF513F2104CAC400FF7608 /* Controller */,
 				0DEF513E2104CAB500FF7608 /* View */,
@@ -125,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				0D08EAC221051D0C00A333D5 /* GradientView.swift */,
+				0D6EEC292106556800892B21 /* RoundedBtn.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -135,6 +151,7 @@
 				0DEF51402104CAED00FF7608 /* ChatVC.swift */,
 				0DEF51422104CAFC00FF7608 /* ChannelVC.swift */,
 				0D08EAC7210538E900A333D5 /* LoginVC.swift */,
+				0D08EACC21058EE300A333D5 /* CreateAccountVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -268,11 +285,14 @@
 			files = (
 				0DEF51432104CAFC00FF7608 /* ChannelVC.swift in Sources */,
 				0DEF51412104CAED00FF7608 /* ChatVC.swift in Sources */,
+				0D6EEC2A2106556800892B21 /* RoundedBtn.swift in Sources */,
 				0D08EAC8210538E900A333D5 /* LoginVC.swift in Sources */,
 				0D08EAC321051D0C00A333D5 /* GradientView.swift in Sources */,
 				0D4E75812104BC9C006CB742 /* AppDelegate.swift in Sources */,
+				0D08EACD21058EE300A333D5 /* CreateAccountVC.swift in Sources */,
 				0DEF513C2104C77700FF7608 /* SWRevealViewController.m in Sources */,
 				0D08EAC6210532F100A333D5 /* Constants.swift in Sources */,
+				0D08EACB210579B800A333D5 /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
