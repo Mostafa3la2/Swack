@@ -12,6 +12,8 @@
 		0D08EAC8210538E900A333D5 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D08EAC7210538E900A333D5 /* LoginVC.swift */; };
 		0D08EACB210579B800A333D5 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D08EACA210579B800A333D5 /* AuthService.swift */; };
 		0D08EACD21058EE300A333D5 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D08EACC21058EE300A333D5 /* CreateAccountVC.swift */; };
+		0D0ACAA52109079000C70413 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0ACAA32109079000C70413 /* ProfileVC.swift */; };
+		0D0ACAA62109079000C70413 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D0ACAA42109079000C70413 /* ProfileVC.xib */; };
 		0D0B58862106915000774A08 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B58852106915000774A08 /* UserDataService.swift */; };
 		0D0B58882106BEBE00774A08 /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B58872106BEBE00774A08 /* AvatarPickerVC.swift */; };
 		0D0B588A2106C07500774A08 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B58892106C07500774A08 /* AvatarCell.swift */; };
@@ -33,6 +35,8 @@
 		0D08EAC7210538E900A333D5 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		0D08EACA210579B800A333D5 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		0D08EACC21058EE300A333D5 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		0D0ACAA32109079000C70413 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		0D0ACAA42109079000C70413 /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		0D0B58852106915000774A08 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		0D0B58872106BEBE00774A08 /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
 		0D0B58892106C07500774A08 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
@@ -92,6 +96,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		0D0ACAA7210907BC00C70413 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				0D0ACAA42109079000C70413 /* ProfileVC.xib */,
+			);
+			path = XIBs;
+			sourceTree = "<group>";
+		};
 		0D4E75742104BC9C006CB742 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +125,7 @@
 		0D4E757F2104BC9C006CB742 /* Swack */ = {
 			isa = PBXGroup;
 			children = (
+				0D0ACAA7210907BC00C70413 /* XIBs */,
 				0D08EAC92105799E00A333D5 /* Services */,
 				0D08EAC4210532CB00A333D5 /* Utilities */,
 				0DEF513F2104CAC400FF7608 /* Controller */,
@@ -164,6 +177,7 @@
 				0D08EAC7210538E900A333D5 /* LoginVC.swift */,
 				0D08EACC21058EE300A333D5 /* CreateAccountVC.swift */,
 				0D0B58872106BEBE00774A08 /* AvatarPickerVC.swift */,
+				0D0ACAA32109079000C70413 /* ProfileVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -237,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D0ACAA62109079000C70413 /* ProfileVC.xib in Resources */,
 				0D4E758B2104BCA0006CB742 /* LaunchScreen.storyboard in Resources */,
 				0D4E75882104BCA0006CB742 /* Assets.xcassets in Resources */,
 				0D4E75862104BC9C006CB742 /* Main.storyboard in Resources */,
@@ -295,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D0ACAA52109079000C70413 /* ProfileVC.swift in Sources */,
 				0DEF51432104CAFC00FF7608 /* ChannelVC.swift in Sources */,
 				0DEF51412104CAED00FF7608 /* ChatVC.swift in Sources */,
 				0D0B58882106BEBE00774A08 /* AvatarPickerVC.swift in Sources */,

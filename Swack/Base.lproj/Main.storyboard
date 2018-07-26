@@ -250,7 +250,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="5xY-A1-NWJ">
                                 <rect key="frame" x="63" y="160" width="250" height="86"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wUL-03-VvT">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wUL-03-VvT">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="250" id="59t-eg-4ei"/>
@@ -316,12 +316,20 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginPressed:" destination="UQ6-TQ-fOb" eventType="touchUpInside" id="GOg-7l-sXj"/>
+                                </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="OaF-wU-QbM">
+                                <rect key="frame" x="169" y="215" width="37" height="37"/>
+                                <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="gwb-Wv-hsa" firstAttribute="centerX" secondItem="0zo-Jm-RDW" secondAttribute="centerX" id="7Dh-Ew-Cm4"/>
                             <constraint firstItem="fq4-cS-NrK" firstAttribute="top" secondItem="gwb-Wv-hsa" secondAttribute="bottom" id="EXu-ZC-Onk"/>
+                            <constraint firstItem="OaF-wU-QbM" firstAttribute="centerX" secondItem="0zo-Jm-RDW" secondAttribute="centerX" id="Mos-dh-DhO"/>
                             <constraint firstItem="mP1-d7-dur" firstAttribute="centerX" secondItem="0zo-Jm-RDW" secondAttribute="centerX" id="Uc8-Wx-WRy"/>
                             <constraint firstItem="5xY-A1-NWJ" firstAttribute="top" secondItem="mP1-d7-dur" secondAttribute="bottom" constant="40" id="Wki-JY-GeL"/>
                             <constraint firstItem="mP1-d7-dur" firstAttribute="top" secondItem="75P-Le-HUU" secondAttribute="bottom" constant="60" id="ZON-SM-M52"/>
@@ -329,10 +337,14 @@
                             <constraint firstItem="fq4-cS-NrK" firstAttribute="centerX" secondItem="0zo-Jm-RDW" secondAttribute="centerX" id="iqT-fq-d5g"/>
                             <constraint firstItem="gwb-Wv-hsa" firstAttribute="top" secondItem="5xY-A1-NWJ" secondAttribute="bottom" constant="40" id="jLA-MB-MtO"/>
                             <constraint firstItem="5xY-A1-NWJ" firstAttribute="centerX" secondItem="0zo-Jm-RDW" secondAttribute="centerX" id="jjb-As-wzD"/>
+                            <constraint firstItem="OaF-wU-QbM" firstAttribute="centerY" secondItem="0zo-Jm-RDW" secondAttribute="centerY" constant="-100" id="kU2-wY-YBS"/>
                             <constraint firstItem="wuI-dt-duk" firstAttribute="trailing" secondItem="0zo-Jm-RDW" secondAttribute="trailingMargin" id="uKG-7f-lTQ"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emailText" destination="wUL-03-VvT" id="cDu-jH-U0g"/>
+                        <outlet property="loader" destination="OaF-wU-QbM" id="XTH-fh-7ep"/>
+                        <outlet property="passwordText" destination="h29-en-HRY" id="sYk-Vd-4BA"/>
                         <segue destination="zQ3-nd-z1j" kind="show" identifier="createAccount" id="Boj-pa-f8j"/>
                     </connections>
                 </viewController>
