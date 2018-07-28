@@ -127,6 +127,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yu5-rU-xDW">
                                 <rect key="frame" x="281" y="75" width="22" height="22"/>
                                 <state key="normal" image="addChannelButton"/>
+                                <connections>
+                                    <action selector="addChannel:" destination="jrJ-BP-Bvi" eventType="touchUpInside" id="Ity-Xr-Spd"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="hhf-sF-pP9" customClass="AvatarCircleImg" customModule="Swack" customModuleProvider="target">
                                 <rect key="frame" x="16" y="572" width="75" height="75"/>

@@ -41,6 +41,11 @@ class ChannelVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     @objc func userDataDidChange(_ notif : Notification){
        setupUserInfo()
     }
+    @IBAction func addChannel(_ sender: Any) {
+        let channel = AddChannelVC()
+        channel.modalPresentationStyle = .custom
+        present(channel,animated: true,completion: nil)
+    }
     func setupUserInfo(){
         if (AuthService.instance.isLoggedIn){
             loginBtn.setTitle(UserDataService.instance.name, for: .normal)
