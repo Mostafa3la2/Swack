@@ -139,7 +139,7 @@
                                 <rect key="frame" x="0.0" y="117" width="375" height="435"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="sVA-6T-bg9">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="channelCell" id="sVA-6T-bg9" customClass="ChannelCell" customModule="Swack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sVA-6T-bg9" id="4hJ-1v-v3j">
@@ -159,6 +159,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="channelName" destination="rDN-14-RJh" id="z7f-ft-6X7"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -201,6 +204,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
+                        <outlet property="channelTableView" destination="oYI-J2-Yic" id="gF4-k2-Xun"/>
                         <outlet property="loginBtn" destination="Vmv-sT-0H6" id="HAI-LI-sy4"/>
                         <outlet property="userImage" destination="hhf-sF-pP9" id="LtA-z8-emw"/>
                         <segue destination="UQ6-TQ-fOb" kind="show" identifier="loginSegue" id="KzM-ud-Jdg"/>
