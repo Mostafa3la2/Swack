@@ -20,6 +20,7 @@
 		0D0B58882106BEBE00774A08 /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B58872106BEBE00774A08 /* AvatarPickerVC.swift */; };
 		0D0B588A2106C07500774A08 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B58892106C07500774A08 /* AvatarCell.swift */; };
 		0D484843210E5EB300A39403 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D484842210E5EB300A39403 /* SocketService.swift */; };
+		0D484845210E962900A39403 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D484844210E962900A39403 /* Message.swift */; };
 		0D48549921079A72007788B0 /* AvatarCircleImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D48549821079A72007788B0 /* AvatarCircleImg.swift */; };
 		0D4E75812104BC9C006CB742 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E75802104BC9C006CB742 /* AppDelegate.swift */; };
 		0D4E75862104BC9C006CB742 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D4E75842104BC9C006CB742 /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 		0D0B58872106BEBE00774A08 /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
 		0D0B58892106C07500774A08 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		0D484842210E5EB300A39403 /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
+		0D484844210E962900A39403 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		0D48549821079A72007788B0 /* AvatarCircleImg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCircleImg.swift; sourceTree = "<group>"; };
 		0D4E757D2104BC9C006CB742 /* Swack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D4E75802104BC9C006CB742 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				0D024E87210A102200063501 /* Channel.swift */,
+				0D484844210E962900A39403 /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				0DEF51432104CAFC00FF7608 /* ChannelVC.swift in Sources */,
 				0DEF51412104CAED00FF7608 /* ChatVC.swift in Sources */,
 				0D0B58882106BEBE00774A08 /* AvatarPickerVC.swift in Sources */,
+				0D484845210E962900A39403 /* Message.swift in Sources */,
 				0D024E88210A102200063501 /* Channel.swift in Sources */,
 				0D6EEC2A2106556800892B21 /* RoundedBtn.swift in Sources */,
 				0D024E86210A0FDB00063501 /* MessageService.swift in Sources */,
