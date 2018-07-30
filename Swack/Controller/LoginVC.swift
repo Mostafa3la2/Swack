@@ -36,6 +36,9 @@ class LoginVC: UIViewController {
                         NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
                         self.loader.stopAnimating()
                         self.loader.isHidden = true
+                        MessageService.instance.findAllChannels(completion: { (success) in
+                            
+                        })
                         self.dismiss(animated: true, completion: nil)
                     }
                 })

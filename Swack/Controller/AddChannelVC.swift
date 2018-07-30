@@ -23,6 +23,13 @@ class AddChannelVC: UIViewController {
     }
     
     @IBAction func createChannelPressed(_ sender: Any) {
+        guard let channelName = nameText.text , nameText.text != "" else{return}
+        guard let channelDescStr = channelDesc.text , channelDesc.text != "" else{return}
+        SocketService.instance.addChannel(channelTitle: channelName, channelDesc: channelDescStr) { (success) in
+            if success {
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
     }
     func setupView(){
         nameText.attributedPlaceholder = NSAttributedString(string: "name", attributes: [NSAttributedStringKey.foregroundColor : PURPLE_PLACEHOLDER])

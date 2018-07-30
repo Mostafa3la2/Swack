@@ -19,6 +19,7 @@
 		0D0B58862106915000774A08 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B58852106915000774A08 /* UserDataService.swift */; };
 		0D0B58882106BEBE00774A08 /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B58872106BEBE00774A08 /* AvatarPickerVC.swift */; };
 		0D0B588A2106C07500774A08 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0B58892106C07500774A08 /* AvatarCell.swift */; };
+		0D484843210E5EB300A39403 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D484842210E5EB300A39403 /* SocketService.swift */; };
 		0D48549921079A72007788B0 /* AvatarCircleImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D48549821079A72007788B0 /* AvatarCircleImg.swift */; };
 		0D4E75812104BC9C006CB742 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4E75802104BC9C006CB742 /* AppDelegate.swift */; };
 		0D4E75862104BC9C006CB742 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D4E75842104BC9C006CB742 /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 		0D0B58852106915000774A08 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		0D0B58872106BEBE00774A08 /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
 		0D0B58892106C07500774A08 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
+		0D484842210E5EB300A39403 /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 		0D48549821079A72007788B0 /* AvatarCircleImg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCircleImg.swift; sourceTree = "<group>"; };
 		0D4E757D2104BC9C006CB742 /* Swack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D4E75802104BC9C006CB742 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				0D08EACA210579B800A333D5 /* AuthService.swift */,
 				0D0B58852106915000774A08 /* UserDataService.swift */,
 				0D024E85210A0FDB00063501 /* MessageService.swift */,
+				0D484842210E5EB300A39403 /* SocketService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D484843210E5EB300A39403 /* SocketService.swift in Sources */,
 				0D0ACAA52109079000C70413 /* ProfileVC.swift in Sources */,
 				0DA2ABC5210CD6140058A787 /* ChannelCell.swift in Sources */,
 				0DEF51432104CAFC00FF7608 /* ChannelVC.swift in Sources */,

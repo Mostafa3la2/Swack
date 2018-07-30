@@ -93,6 +93,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
+                        <outlet property="channelNameLbl" destination="NRh-s5-t61" id="TWe-AQ-Z9j"/>
                         <outlet property="menuBtn" destination="RnC-7S-zCg" id="D3P-lR-Xbj"/>
                     </connections>
                 </viewController>

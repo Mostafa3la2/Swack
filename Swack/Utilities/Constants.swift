@@ -32,8 +32,8 @@ let PURPLE_PLACEHOLDER = #colorLiteral(red: 0.3254901961, green: 0.4196078431, b
 
 //notification constants
 let NOTIF_USER_DATA_DID_CHANGE = Notification.Name("userdataChanged")
-
-
+let NOTIF_CHANNELS_LOADED = Notification.Name("channelsLoaded")
+let NOTIF_CHANNEL_SELECTED = Notification.Name("channelSelected")
 //Headers
 let HEADER = [
     "Content-Type": "application/json; charset=utf-8"
