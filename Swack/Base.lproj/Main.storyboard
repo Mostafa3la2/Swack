@@ -79,7 +79,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DEd-O8-Xqn">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DEd-O8-Xqn">
                                 <rect key="frame" x="0.0" y="627" width="375" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Gd1-4Q-MdW"/>
@@ -157,12 +157,19 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RF7-WI-Aje">
+                                <rect key="frame" x="8" y="623" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="DEd-O8-Xqn" firstAttribute="top" secondItem="zRq-Lg-aCj" secondAttribute="bottom" constant="20" id="3sc-e2-H4F"/>
                             <constraint firstItem="YYu-Oi-Iek" firstAttribute="leading" secondItem="55I-VD-voC" secondAttribute="leading" id="5vh-Jx-ylO"/>
                             <constraint firstAttribute="trailing" secondItem="DEd-O8-Xqn" secondAttribute="trailing" id="9wh-S9-6lS"/>
+                            <constraint firstItem="DEd-O8-Xqn" firstAttribute="top" secondItem="RF7-WI-Aje" secondAttribute="bottom" constant="4" id="Kaw-1a-Q6H"/>
                             <constraint firstAttribute="trailing" secondItem="6i7-1S-gZN" secondAttribute="trailing" constant="8" id="R9g-bn-u2y"/>
                             <constraint firstItem="DEd-O8-Xqn" firstAttribute="leading" secondItem="55I-VD-voC" secondAttribute="leading" id="XcZ-4t-jdT"/>
                             <constraint firstItem="zRq-Lg-aCj" firstAttribute="leading" secondItem="55I-VD-voC" secondAttribute="leading" id="fnK-SI-xvx"/>
@@ -170,6 +177,7 @@
                             <constraint firstItem="YYu-Oi-Iek" firstAttribute="top" secondItem="55I-VD-voC" secondAttribute="top" id="hw8-w2-ivs"/>
                             <constraint firstAttribute="trailing" secondItem="zRq-Lg-aCj" secondAttribute="trailing" id="leo-IE-GiA"/>
                             <constraint firstAttribute="trailing" secondItem="YYu-Oi-Iek" secondAttribute="trailing" id="qH9-7N-7pI"/>
+                            <constraint firstItem="RF7-WI-Aje" firstAttribute="leading" secondItem="55I-VD-voC" secondAttribute="leading" constant="8" id="rdT-zJ-XKu"/>
                             <constraint firstItem="zRq-Lg-aCj" firstAttribute="top" secondItem="YYu-Oi-Iek" secondAttribute="bottom" id="tHu-yu-V49"/>
                             <constraint firstItem="6i7-1S-gZN" firstAttribute="centerY" secondItem="DEd-O8-Xqn" secondAttribute="centerY" id="wAT-M5-oog"/>
                         </constraints>
@@ -185,6 +193,7 @@
                         <outlet property="menuBtn" destination="RnC-7S-zCg" id="D3P-lR-Xbj"/>
                         <outlet property="messageTextbox" destination="DEd-O8-Xqn" id="txW-ZH-6d5"/>
                         <outlet property="sendBtn" destination="6i7-1S-gZN" id="sDa-ZL-L1v"/>
+                        <outlet property="typingUserLbl" destination="RF7-WI-Aje" id="CIp-XO-r54"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CDo-oc-j7w" userLabel="First Responder" sceneMemberID="firstResponder"/>

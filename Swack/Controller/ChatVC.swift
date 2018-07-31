@@ -19,6 +19,7 @@ class ChatVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     @IBOutlet weak var messageTextbox: UITextField!
     @IBOutlet weak var chatTableview: UITableView!
     @IBOutlet weak var sendBtn: UIButton!
+    @IBOutlet weak var typingUserLbl: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         sendBtn.isHidden = true
@@ -41,6 +42,36 @@ class ChatVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
                 if MessageService.instance.messages.count > 0{
                     let index = IndexPath(row: MessageService.instance.messages.count-1, section: 1)
                     self.chatTableview.scrollToRow(at: index, at: .bottom, animated: false)
+                }
+            }
+        }
+        SocketService.instance.getTypingUsers { (typingUsers) in
+            guard let channelID = MessageService.instance.selectedChannel?.channelid else{return}
+            
+            var names = ""
+            var numOfTypers = 0
+            for (typingUser,channel) in typingUsers{
+                if typingUser != UserDataService.instance.name && channel == channelID{
+                    if names == ""{
+                        names = typingUser
+                    }else{
+                        names = "\(names), \(typingUser)"
+                        
+                    }
+                    numOfTypers+=1
+                }
+               
+                if numOfTypers > 0 && AuthService.instance.isLoggedIn == true{
+                    debugPrint("this should appear")
+                    var verb = "is"
+                    if numOfTypers > 1{
+                        var verb = "are"
+                    }
+                    
+                    self.typingUserLbl.text = "\(names) \(verb) typing a message"
+                    
+                }else{
+                    self.typingUserLbl.text = ""
                 }
             }
         }
@@ -90,7 +121,7 @@ class ChatVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         guard let channelID = MessageService.instance.selectedChannel?.channelid else{return}
         MessageService.instance.findAllMessagesForChannel(channelID: channelID) { (success) in
             if success{
-                debugPrint("test")
+                
                 self.chatTableview.reloadData()
             }
         }
@@ -99,9 +130,15 @@ class ChatVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         if messageTextbox.text == ""{
             isTyping = false
             sendBtn.isHidden = true
+            SocketService.instance.stopTyping(username: UserDataService.instance.name, channelID: (MessageService.instance.selectedChannel?.channelid)!) { (success) in
+                
+            }
         }else{
             if isTyping == false{
                 sendBtn.isHidden = false
+                SocketService.instance.startTyping(username: UserDataService.instance.name, channelID: (MessageService.instance.selectedChannel?.channelid)!) { (success) in
+                    
+                }
             }
             isTyping=true
         }
@@ -114,6 +151,9 @@ class ChatVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
                 if success{
                     self.messageTextbox.text = ""
                     self.messageTextbox.resignFirstResponder()
+                    SocketService.instance.stopTyping(username: UserDataService.instance.name, channelID: (MessageService.instance.selectedChannel?.channelid)!) { (success) in
+                        
+                    }
                 }
             }
         }
@@ -122,7 +162,6 @@ class ChatVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell", for : indexPath) as? MessageCell{
             let message = MessageService.instance.messages[indexPath.row]
             cell.configureCell(message: message)
-            debugPrint(message.message)
             return cell
         }else{
             return MessageCell()}
