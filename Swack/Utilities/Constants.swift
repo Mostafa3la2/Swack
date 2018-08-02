@@ -18,6 +18,8 @@ let URL_USER_ADD = "\(BASE_URL)user/add"
 let URL_USER_BY_EMAIL = "\(BASE_URL)user/byEmail/"
 let URL_GET_CHANNELS = "\(BASE_URL)channel/"
 let URL_GET_MESSAGES = "\(BASE_URL)message/byChannel/"
+let URL_EDIT_USER = "\(BASE_URL)user/" //Add user id afterthat 
+
 //segues
 let LOGIN = "loginSegue"
 let CREATE_ACCOUNT = "createAccount"

@@ -12,21 +12,21 @@ class ProfileVC: UIViewController {
 
     @IBOutlet weak var profileImg: UIImageView!
     
-    @IBOutlet weak var username: UILabel!
+    @IBOutlet weak var editNameBtn: UIButton!
+    
+    @IBOutlet weak var name: UITextField!
     
     @IBOutlet weak var usermail: UILabel!
     
     @IBOutlet weak var bgView: UIView!
+    
+    var editBtnState = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     @IBAction func logoutPressed(_ sender: Any) {
         UserDataService.instance.logout()
@@ -37,10 +37,24 @@ class ProfileVC: UIViewController {
     @IBAction func closeModalPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    @IBAction func editNamePressed(_ sender: Any) {
+        if editBtnState == 0{
+            editBtnState += 1
+            editNameBtn.setTitle("Finish", for: .normal)
+            name.isUserInteractionEnabled = true
+            }else{
+            guard let newName = name.text, name.text != "" else{return}
+            AuthService.instance.editUsername(name: newName) { (success) in
+                self.editBtnState = 0
+                self.editNameBtn.setTitle("Edit", for: .normal)
+                self.name.isUserInteractionEnabled = false
+            }
+        }
+    }
     
     func setupView(){
+        name.attributedPlaceholder = NSAttributedString(string:UserDataService.instance.name,attributes:[NSAttributedStringKey.foregroundColor:#colorLiteral(red: 0.2588235294, green: 0.3294117647, blue: 0.7254901961, alpha: 1)])
         profileImg.image = UIImage(named: UserDataService.instance.avatarName)
-        username.text = UserDataService.instance.name
         usermail.text = UserDataService.instance.email
         profileImg.backgroundColor = UserDataService.instance.returnUIColor(components: UserDataService.instance.avatarColor)
         

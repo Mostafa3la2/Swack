@@ -16,7 +16,7 @@ class MessageCell: UITableViewCell {
     @IBOutlet weak var msgBodyLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
 
     func configureCell(message:Message){

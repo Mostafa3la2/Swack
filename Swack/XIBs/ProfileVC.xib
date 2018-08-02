@@ -12,9 +12,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileVC" customModule="Swack" customModuleProvider="target">
             <connections>
                 <outlet property="bgView" destination="8E6-pC-Ktc" id="GLb-R1-hZT"/>
+                <outlet property="editNameBtn" destination="66g-3J-EME" id="E8D-TM-7gc"/>
+                <outlet property="name" destination="r9K-Ay-WmP" id="RBH-Xt-LOZ"/>
                 <outlet property="profileImg" destination="e5e-GY-4iF" id="xtb-bx-80T"/>
                 <outlet property="usermail" destination="3Tq-Nu-ew9" id="qlk-sO-PpR"/>
-                <outlet property="username" destination="kkQ-VP-fEA" id="s0M-9O-sVD"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -28,7 +29,7 @@
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IFt-M5-bxn">
-                    <rect key="frame" x="20" y="173.5" width="335" height="320"/>
+                    <rect key="frame" x="20" y="174" width="335" height="320"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8J-2y-ymS">
                             <rect key="frame" x="299" y="8" width="28" height="28"/>
@@ -38,7 +39,7 @@
                             </connections>
                         </button>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="UQ7-yX-ygc">
-                            <rect key="frame" x="95.5" y="33.5" width="144.5" height="213"/>
+                            <rect key="frame" x="95.5" y="35.5" width="144.5" height="209.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJc-s8-eZI">
                                     <rect key="frame" x="9" y="0.0" width="127" height="27.5"/>
@@ -53,14 +54,14 @@
                                         <constraint firstAttribute="width" constant="100" id="qgk-DL-YOg"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mostafa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkQ-VP-fEA">
-                                    <rect key="frame" x="36" y="155.5" width="73" height="23.5"/>
-                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r9K-Ay-WmP">
+                                    <rect key="frame" x="68" y="155.5" width="9" height="20"/>
                                     <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mostafa@alaa.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Tq-Nu-ew9">
-                                    <rect key="frame" x="0.0" y="193" width="144.5" height="20"/>
+                                    <rect key="frame" x="0.0" y="189.5" width="144.5" height="20"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                     <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
@@ -77,13 +78,25 @@
                                 <action selector="logoutPressed:" destination="-1" eventType="touchUpInside" id="Gnk-tM-A1f"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="66g-3J-EME">
+                            <rect key="frame" x="255" y="187" width="30" height="29"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                            <state key="normal" title="Edit">
+                                <color key="titleColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="editNamePressed:" destination="-1" eventType="touchUpInside" id="WMD-AV-JUW"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="320" id="C5K-Ka-OKK"/>
                         <constraint firstItem="UQ7-yX-ygc" firstAttribute="centerY" secondItem="IFt-M5-bxn" secondAttribute="centerY" constant="-20" id="OGy-Tk-6Yw"/>
                         <constraint firstItem="Z8J-2y-ymS" firstAttribute="top" secondItem="IFt-M5-bxn" secondAttribute="top" constant="8" id="QTV-Bg-gfg"/>
+                        <constraint firstAttribute="trailing" secondItem="66g-3J-EME" secondAttribute="trailing" constant="50" id="WNU-Ok-6p3"/>
                         <constraint firstItem="UQ7-yX-ygc" firstAttribute="centerX" secondItem="IFt-M5-bxn" secondAttribute="centerX" id="dQJ-66-WLd"/>
+                        <constraint firstItem="66g-3J-EME" firstAttribute="centerY" secondItem="r9K-Ay-WmP" secondAttribute="centerY" id="gLY-SV-cKo"/>
                         <constraint firstAttribute="bottom" secondItem="Ohe-FT-nX5" secondAttribute="bottom" constant="8" id="uCw-TL-hZf"/>
                         <constraint firstItem="Ohe-FT-nX5" firstAttribute="centerX" secondItem="IFt-M5-bxn" secondAttribute="centerX" id="uGv-qd-x4N"/>
                         <constraint firstAttribute="trailing" secondItem="Z8J-2y-ymS" secondAttribute="trailing" constant="8" id="xz6-D4-JsL"/>
