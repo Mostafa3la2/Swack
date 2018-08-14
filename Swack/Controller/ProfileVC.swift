@@ -31,6 +31,8 @@ class ProfileVC: UIViewController {
     @IBAction func logoutPressed(_ sender: Any) {
         UserDataService.instance.logout()
         NotificationCenter.default.post(name:NOTIF_USER_DATA_DID_CHANGE,object:nil)
+        
+       
         dismiss(animated: true, completion: nil)
     }
     
@@ -48,6 +50,8 @@ class ProfileVC: UIViewController {
                 self.editBtnState = 0
                 self.editNameBtn.setTitle("Edit", for: .normal)
                 self.name.isUserInteractionEnabled = false
+                //just a test
+                NotificationCenter.default.post(name:NOTIF_USER_EDITED_NAME,object:nil)
             }
         }
     }

@@ -36,6 +36,7 @@ class ChatVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         
         NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
          NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.channelSelected(_:)), name: NOTIF_CHANNEL_SELECTED, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.userChangedName(_:)), name: NOTIF_USER_EDITED_NAME, object: nil)
         SocketService.instance.getChatMessage { (newMessage) in
             if newMessage.channelID == MessageService.instance.selectedChannel?.channelid && AuthService.instance.isLoggedIn{
                 MessageService.instance.messages.append(newMessage)
@@ -47,6 +48,7 @@ class ChatVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
                 }
             }
         }
+       
         SocketService.instance.getTypingUsers { (typingUsers) in
             guard let channelID = MessageService.instance.selectedChannel?.channelid else{return}
             
@@ -85,6 +87,16 @@ class ChatVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         }
         
        
+    }
+    @objc func userChangedName(_ notif :Notification){
+        debugPrint(MessageService.instance.messages)
+        chatTableview.reloadData()
+    }
+    override func viewDidAppear(_ animated: Bool){
+        for message in MessageService.instance.messages{
+            debugPrint(message)
+        }
+        chatTableview.reloadData()
     }
     @objc func userDataDidChange(_ notif : Notification){
         if AuthService.instance.isLoggedIn{

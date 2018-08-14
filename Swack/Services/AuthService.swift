@@ -168,6 +168,15 @@ class AuthService{
             ]
             Alamofire.request("\(URL_EDIT_USER)\(UserDataService.instance.id)", method: .put, parameters: body, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseString { (response) in
                 if response.result.error == nil{
+                    
+                    //not reliable
+                    //update the message sender name if he changes his name, however this is applied only locally and volatile
+                    for  i in 0..<MessageService.instance.messages.count{
+                   
+                        if MessageService.instance.messages[i].userID == user.id{
+                            MessageService.instance.messages[i].changeUsername(name: name)
+                        }
+                    }
                     debugPrint(response.result)
                     completion(true)
                 }else{

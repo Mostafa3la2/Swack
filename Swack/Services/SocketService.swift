@@ -53,13 +53,14 @@ class SocketService: NSObject {
         
         socket.on("messageCreated") { (data, ack) in
             guard let msgBody = data[0] as? String else{return}
+            guard let userID = data[1] as? String else{return}
             guard let channelID = data[2] as? String else{return}
             guard let userName = data[3] as? String else{return}
             guard let userAvatar = data[4] as? String else{return}
             guard let userAvatarColor = data[5] as? String else{return}
             guard let msgID = data[6] as? String else{return}
             guard let timestamp = data[7] as? String else{return}
-            let message = Message(message: msgBody, userName: userName, channelID: channelID, userAvatar: userAvatar, userAvatarColor: userAvatarColor, id: msgID, timeStamp: timestamp)
+            let message = Message(message: msgBody, userName: userName, channelID: channelID, userAvatar: userAvatar, userAvatarColor: userAvatarColor, id: msgID, timeStamp: timestamp,userID:userID)
             completion(message)
          
         }
